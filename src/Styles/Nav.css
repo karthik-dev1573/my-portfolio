@@ -1,0 +1,58 @@
+/* 🧭 Navbar */
+nav {
+  background: rgba(2, 6, 23, 0.8);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navItems {
+  display: flex;
+  gap: 5vh;
+}
+
+nav a {
+  position: relative;
+  color: var(--muted-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in;
+  padding-bottom: 4px; /* space for underline */
+}
+
+/* ✨ Center-Out Underline Using ::before */
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+nav a:hover::before,
+nav a.active::before {
+  width: 100%;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--accent);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}

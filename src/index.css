@@ -1,0 +1,73 @@
+/* 🌈 Root Variables */
+:root {
+  --main-bg: #020617;
+  --main-text: #e2e8f0;
+  --accent: #7c3aed; /* soft blue accent */
+  --muted-text: #94a3b8; /* secondary text */
+  --card-bg: #111827; /* card background */
+  --border-color: #334155;
+  --radius: 8px;
+}
+
+/* 🔧 Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background-color: var(--main-bg);
+  color: var(--main-text);
+  line-height: 1.6;
+}
+
+/* 🏠 Section Base Styles */
+section {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+}
+
+/* ✨ Headings */
+h1,
+h2,
+h3 {
+  color: var(--main-text);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+/* 📦 Card (for projects or skills) */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+p {
+  color: var(--muted-text);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+}
