@@ -1,5 +1,6 @@
 import "../Styles/Home.css";
 import About from "./About";
+import Project from "./Project";
 
 const Home = () => {
   return (
@@ -21,7 +22,7 @@ const Home = () => {
         </div>
       </div>
       <div className="robotModal">
-        {/* <spline-viewer url="https://prod.spline.design/ECb9SL5Kuj5amdPq/scene.splinecode"></spline-viewer> */}
+        <spline-viewer url="https://prod.spline.design/ECb9SL5Kuj5amdPq/scene.splinecode"></spline-viewer>
       </div>
 
       <div className="otherDetails">
@@ -39,6 +40,7 @@ const Home = () => {
         </p>
       </div>
       <About />
+      <Project />
     </div>
   );
 };

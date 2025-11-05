@@ -1,0 +1,118 @@
+.projectTitle {
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 4rem;
+    margin-top: 20vh;
+  }
+}
+.projectContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px;
+  margin-top: 10vh;
+}
+.projectCard {
+  width: 380px;
+  height: 450px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+
+.projectCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.projectImage {
+  padding: 15px;
+}
+.projectImage img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
+.projectContent {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 160px);
+}
+
+.projectContent h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.projectContent p {
+  font-size: 0.9rem;
+  color: #cfcfcf;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.techStack span {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  color: #f4f4f4;
+}
+
+.projectLinks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 80px;
+  transition: all 0.3s ease;
+}
+
+.githubBtn {
+  background: #2d2d2d;
+  color: #fff;
+}
+
+.githubBtn:hover {
+  background: #444;
+}
+
+.liveBtn {
+  background: #0078ff;
+  color: #fff;
+}
+
+.liveBtn:hover {
+  background: #005ed1;
+}
