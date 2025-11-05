@@ -1,12 +1,16 @@
+import Footer from "../Components/Footer";
 import "../Styles/Home.css";
 import About from "./About";
+import Contact from "./Contact";
 import Project from "./Project";
 
 const Home = () => {
   return (
     <div className="homeContainer">
       <div className="homeContent">
-        <h1 className="name">Hi 👋, I’m Karthik P</h1>
+        <h1 className="name">
+          Hi <span>👋</span>, I’m Karthik P
+        </h1>
         <p className="subHeadline">
           I build dynamic, user-friendly, and efficient web applications using
           Java, Spring Boot, React, and MySQL. Passionate about crafting
@@ -39,8 +43,6 @@ const Home = () => {
           <span className="lightText">modern UI</span> design.
         </p>
       </div>
-      <About />
-      <Project />
     </div>
   );
 };

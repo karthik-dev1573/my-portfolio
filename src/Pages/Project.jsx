@@ -1,3 +1,4 @@
+import Footer from "../Components/Footer";
 import ProjectCard from "../Components/ProjectCard";
 import { projects } from "../Constants/data";
 import "../Styles/ProjectCard.css";

@@ -1,10 +1,10 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Project from "./Pages/Project";
 import Contact from "./Pages/Contact";
 import Nav from "./Components/Nav";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -16,6 +16,7 @@ const App = () => {
         <Route path="/projects" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </>
   );
 };

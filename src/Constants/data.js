@@ -1,3 +1,24 @@
+import { FaGithub, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+
+export const navItems = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "About",
+    path: "/about",
+  },
+  {
+    name: "Projects",
+    path: "/projects",
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+  },
+];
 export const projects = [
   {
     title: "Personal Portfolio Website",
@@ -52,5 +73,28 @@ export const projects = [
     image: "/images/recipe-finder.png",
     github: "https://github.com/karthik-dev1573/recipe-finder",
     liveDemo: "https://karthik-recipes.vercel.app/",
+  },
+];
+
+export const contactDatas = [
+  {
+    name: "Gmail",
+    icon: SiGmail,
+    link: "mailto:karthikbpcse@gmail.com",
+  },
+  {
+    name: "WhatsApp",
+    icon: FaWhatsapp,
+    link: "https://wa.me/919384316529",
+  },
+  {
+    name: "GitHub",
+    icon: FaGithub,
+    link: "https://github.com/karthik-dev1573",
+  },
+  {
+    name: "Phone",
+    icon: FaPhoneAlt,
+    link: "tel:+919384316529",
   },
 ];

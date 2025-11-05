@@ -1,25 +1,8 @@
 import { NavLink } from "react-router-dom";
 import "../Styles/Nav.css";
+import { navItems } from "../Constants/data";
 
 const Nav = () => {
-  const navItems = [
-    {
-      name: "Home",
-      path: "/",
-    },
-    {
-      name: "About",
-      path: "/about",
-    },
-    {
-      name: "Projects",
-      path: "/projects",
-    },
-    {
-      name: "Contact",
-      path: "/contact",
-    },
-  ];
   return (
     <nav>
       <div className="navItems">

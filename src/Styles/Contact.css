@@ -1,0 +1,68 @@
+.contactContainer {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "content logo"
+    "map map";
+}
+.contactContent {
+  grid-area: content;
+  width: 80%;
+  margin-left: 20vh;
+}
+.contactContent h1 {
+  font-size: 4rem;
+  margin-top: 10vh;
+  background: linear-gradient(120deg, #ecebeb, #4a4a4a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.contactContent p {
+  width: 500px;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: justify;
+}
+.socialMedia {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 100px;
+  gap: 4em;
+
+  .social-icon {
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-10px) scale(1.1);
+    }
+  }
+  .gmail {
+    color: red;
+  }
+  .whatsapp {
+    color: rgb(0, 203, 0);
+  }
+  .phone {
+    color: rgb(0, 153, 255);
+  }
+}
+.googleMap {
+  grid-area: map;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+
+  iframe {
+    border-radius: 20px;
+  }
+}
