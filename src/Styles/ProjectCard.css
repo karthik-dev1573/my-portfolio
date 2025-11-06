@@ -1,19 +1,21 @@
 .projectTitle {
-  width: 100vw;
+  width: 100%;
   height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  h1 {
-    font-size: 4rem;
-    margin-top: 20vh;
-    background: linear-gradient(120deg, #ecebeb, #4a4a4a);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
 }
+
+.projectTitle h1 {
+  font-size: 4rem;
+  margin-top: 20vh;
+  background: linear-gradient(120deg, #ecebeb, #4a4a4a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Project Container */
 .projectContainer {
   display: flex;
   flex-wrap: wrap;
@@ -22,6 +24,8 @@
   padding: 50px;
   margin-top: 10vh;
 }
+
+/* Project Card */
 .projectCard {
   width: 380px;
   height: 450px;
@@ -42,6 +46,7 @@
 .projectImage {
   padding: 15px;
 }
+
 .projectImage img {
   width: 100%;
   height: 160px;
@@ -119,4 +124,95 @@
 
 .liveBtn:hover {
   background: #005ed1;
+}
+
+/* =========================================================
+   📱 RESPONSIVE DESIGN
+   ========================================================= */
+
+/* Tablets (width ≤ 1024px) */
+@media (max-width: 1024px) {
+  .projectTitle h1 {
+    font-size: 3rem;
+    margin-top: 10vh;
+  }
+
+  .projectContainer {
+    padding: 30px;
+    gap: 30px;
+  }
+
+  .projectCard {
+    width: 320px;
+    height: 420px;
+  }
+
+  .projectContent p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile (width ≤ 768px) */
+@media (max-width: 768px) {
+  .projectTitle h1 {
+    font-size: 2.5rem;
+    margin-top: 8vh;
+  }
+
+  .projectContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 5vh;
+    gap: 20px;
+  }
+
+  .projectCard {
+    width: 90%;
+    height: auto;
+  }
+
+  .projectImage img {
+    height: 180px;
+  }
+
+  .btn {
+    margin-bottom: 40px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Mobile (width ≤ 480px) */
+@media (max-width: 480px) {
+  .projectTitle h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .projectCard {
+    width: 95%;
+    height: auto;
+  }
+
+  .projectImage img {
+    height: 150px;
+  }
+
+  .projectContent h2 {
+    font-size: 1rem;
+  }
+
+  .projectContent p {
+    font-size: 0.8rem;
+  }
+
+  .techStack span {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+
+  .btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
 }
