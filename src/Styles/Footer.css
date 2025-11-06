@@ -1,0 +1,167 @@
+.footerContainer {
+  width: 100%;
+  background-color: var(--main-bg, #0b0b0b);
+  color: #ccc;
+  padding: 60px 10%;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #2a2a2a;
+  margin-top: 30vh;
+}
+
+.footerContainer::before,
+.footerContainer::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+}
+.footerContainer::before {
+  top: -50px;
+  left: -100px;
+  background: rgba(138, 43, 226, 0.2);
+}
+.footerContainer::after {
+  bottom: -80px;
+  right: -100px;
+  background: rgba(0, 128, 255, 0.2);
+}
+
+.footerWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Left Section */
+.footerLeft {
+  flex: 1;
+  min-width: 250px;
+}
+.footerName {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.footerName:hover {
+  color: var(--accent, #a855f7);
+}
+.footerSubtext {
+  font-size: 0.95rem;
+  color: #aaa;
+  line-height: 1.6;
+  margin-top: 10px;
+  max-width: 300px;
+}
+
+/* Middle Section */
+.footerMiddle {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+.footerTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+.footerNav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footerNav li {
+  margin: 8px 0;
+}
+.footerLink {
+  text-decoration: none;
+  color: #aaa;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+.footerLink:hover {
+  color: var(--accent, #a855f7);
+}
+.activeLink {
+  color: var(--accent, #a855f7);
+}
+
+/* Right Section */
+.footerRight {
+  flex: 1;
+  min-width: 200px;
+  text-align: right;
+}
+.socialIcons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 10px;
+}
+.socialIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  border-radius: 50%;
+  padding: 10px;
+  transition: all 0.3s ease;
+  color: #ccc;
+  font-size: 1.2rem;
+}
+.socialIcon:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Hover colors for each icon */
+.socialIcon.gmail:hover {
+  background-color: #ea4335; /* Gmail Red */
+}
+.socialIcon.whatsapp:hover {
+  background-color: #25d366; /* WhatsApp Green */
+}
+.socialIcon.github:hover {
+  background-color: #ffffff; /* GitHub Dark */
+  color: #000000;
+}
+.socialIcon.phone:hover {
+  background-color: #0077ff; /* Phone Blue */
+}
+
+/* Bottom Section */
+.footerBottom {
+  border-top: 1px solid #2a2a2a;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footerWrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footerRight {
+    text-align: center;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+}

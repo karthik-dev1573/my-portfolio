@@ -1,6 +1,5 @@
 import "../Styles/Contact.css";
-import { contactDatas } from "../Constants/data";
-import Footer from "../Components/Footer";
+import { contactDatas } from "../Constants/data"
 
 const Contact = () => {
   return (
@@ -28,7 +27,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className={`social-icon ${contactData.name.toLowerCase()}`}
             >
-              <Icon size={48} />
+              <Icon size={50} />
             </a>
           );
         })}
@@ -46,7 +45,6 @@ const Contact = () => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-
     </div>
   );
 };
