@@ -1,21 +1,27 @@
 .contactContainer {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
   grid-template-areas:
     "content logo"
     "map map";
+  color: white;
+  padding: 50px 80px;
+  box-sizing: border-box;
 }
+
+/* ====== CONTACT CONTENT ====== */
 .contactContent {
   grid-area: content;
-  width: 80%;
-  margin-left: 20vh;
+  width: 90%;
+  margin-left: 5vh;
 }
+
 .contactContent h1 {
   font-size: 4rem;
-  margin-top: 10vh;
+  margin-top: 8vh;
   background: linear-gradient(120deg, #ecebeb, #4a4a4a);
   background-clip: text;
   -webkit-background-clip: text;
@@ -24,47 +30,165 @@
 
 .contactContent p {
   width: 500px;
-  font-size: 24px;
+  font-size: 1.3rem;
   font-weight: 300;
   text-align: justify;
+  line-height: 1.6;
+  margin-top: 20px;
 }
+
+/* ====== SOCIAL ICONS ====== */
 .socialMedia {
   grid-area: logo;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 100px;
-  gap: 4em;
-
-  .social-icon {
-    text-decoration: none;
-    color: white;
-    border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
-
-    &:hover {
-      transform: translateY(-10px) scale(1.1);
-    }
-  }
-  .gmail {
-    color: rgb(230, 54, 0);
-  }
-  .whatsapp {
-    color: rgb(0, 203, 0);
-  }
-  .phone {
-    color: rgb(0, 153, 255);
-  }
+  flex-wrap: wrap;
+  gap: 3em;
+  padding-right: 60px;
 }
+
+.socialMedia .social-icon {
+  text-decoration: none;
+  color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.socialMedia .social-icon:hover {
+  transform: translateY(-10px) scale(1.1);
+}
+
+.socialMedia .gmail {
+  color: rgb(230, 54, 0);
+}
+
+.socialMedia .whatsapp {
+  color: rgb(0, 203, 0);
+}
+
+.socialMedia .phone {
+  color: rgb(0, 153, 255);
+}
+
+/* ====== GOOGLE MAP ====== */
 .googleMap {
   grid-area: map;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px;
-  margin-bottom: 20vh;
+  padding: 60px 0;
+}
 
-  iframe {
-    border-radius: 20px;
+.googleMap iframe {
+  width: 70%;
+  height: 350px;
+  border-radius: 20px;
+  border: none;
+}
+
+/* 🔹 Large Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .contactContainer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "logo"
+      "map";
+    padding: 40px;
+    text-align: center;
+  }
+
+  .contactContent {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .contactContent h1 {
+    font-size: 3rem;
+    margin-top: 15vh;
+  }
+
+  .contactContent p {
+    width: 100%;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .socialMedia {
+    padding: 40px 0;
+    gap: 2.5em;
+  }
+
+  .googleMap iframe {
+    width: 85%;
+    height: 300px;
+  }
+}
+
+/* 🔹 Tablets and Medium Devices (≤ 768px) */
+@media (max-width: 768px) {
+  .contactContainer {
+    padding: 30px 20px;
+  }
+
+  .contactContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .contactContent p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .socialMedia {
+    gap: 2em;
+  }
+
+  .socialMedia .social-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .googleMap iframe {
+    width: 90%;
+    height: 280px;
+  }
+}
+
+/* 🔹 Small Mobiles (≤ 480px) */
+@media (max-width: 480px) {
+  .contactContainer {
+    padding: 20px;
+  }
+
+  .contactContent h1 {
+    font-size: 2rem;
+  }
+
+  .contactContent p {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+
+  .socialMedia {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+  }
+
+  .socialMedia .social-icon svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .googleMap {
+    padding: 30px 0;
+  }
+
+  .googleMap iframe {
+    width: 100%;
+    height: 250px;
   }
 }
