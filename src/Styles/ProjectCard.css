@@ -134,7 +134,7 @@
 @media (max-width: 1024px) {
   .projectTitle h1 {
     font-size: 3rem;
-    margin-top: 10vh;
+    margin-top: 20vh;
   }
 
   .projectContainer {
@@ -150,13 +150,16 @@
   .projectContent p {
     font-size: 0.85rem;
   }
+  .btn{
+    margin-top: 5vh;
+  }
 }
 
 /* Mobile (width ≤ 768px) */
 @media (max-width: 768px) {
   .projectTitle h1 {
     font-size: 2.5rem;
-    margin-top: 8vh;
+    margin-top: 15vh;
   }
 
   .projectContainer {
