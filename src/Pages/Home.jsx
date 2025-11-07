@@ -3,8 +3,11 @@ import "../Styles/Home.css";
 import About from "./About";
 import Contact from "./Contact";
 import Project from "./Project";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="homeContainer">
       <div className="homeContent">
@@ -17,10 +20,10 @@ const Home = () => {
           seamless digital experiences and writing clean, optimized code.
         </p>
         <div className="btns">
-          <button>
+          <button onClick={() => navigate("/projects")}>
             <span>View My Projects</span>{" "}
           </button>
-          <button>
+          <button onClick={() => navigate("/contact")}>
             <span>Hire Me</span>
           </button>
         </div>
