@@ -54,7 +54,7 @@ export const projects = [
     techStack: ["React", "CSS"],
     image: "/images/calculator.png",
     github: "https://github.com/karthik-dev1573/calculator",
-    liveDemo: "https://karthik-calculator.vercel.app/",
+    liveDemo: "https://calculator-six-nu-72.vercel.app/",
   },
   {
     title: "Login Authentication System",
